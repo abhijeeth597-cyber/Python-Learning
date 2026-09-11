@@ -1,3 +1,6 @@
+from numpy import inf
+
+
 arr = [10,20,30,40]
 for value in arr:
     print(value)
@@ -31,3 +34,18 @@ def find_max(arr):
 
 
 print(find_max(arr))  # Output: 9
+
+#Find the second largest number in the list[10,5,8,20,15]? -> Traversal
+arr = [10, 5, 8, 20, 15]
+def find_second_largest(arr):
+    second_largest = float('-inf')
+    first_largest = float('-inf')
+    for i in range(len(arr)):
+        if arr[i] > first_largest:
+            second_largest = first_largest
+            first_largest = arr[i]
+        elif arr[i] > second_largest and arr[i] != first_largest:
+            second_largest = arr[i]
+    return second_largest
+
+print(find_second_largest(arr))  # Output: 15
