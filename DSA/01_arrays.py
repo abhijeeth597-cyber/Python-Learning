@@ -49,3 +49,4 @@ def find_second_largest(arr):
     return second_largest
 
 print(find_second_largest(arr))  # Output: 15
+
