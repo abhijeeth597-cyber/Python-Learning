@@ -41,6 +41,18 @@ for num in numbers:
         break
     seen.add(num)
 print("First repeated number:", first_repeated)
-
-
+#Find the first non repeated numbers = [4, 7, 2, 7, 4, 9, 2, 11]
+numbers = [4, 7, 2, 7, 4, 9, 2, 11]
+counts = {}
+first_non_repeated = None
+for num in numbers:
+    if num in counts:
+        counts[num] += 1
+    else:
+        counts[num] = 1
+for num in numbers:
+    if counts[num] == 1:
+        first_non_repeated = num
+        break
+print("First non-repeated number:", first_non_repeated)
 
